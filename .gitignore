@@ -1,0 +1,31 @@
+# Ignore everything in the root except
+# of git and repository specific files.
+/*
+!.git
+!.gitignore
+!.gitlab-ci.yml
+!README.md
+
+# Ignore all files inside `wp-content` ...
+!wp-content
+wp-content/*
+# ... except directories with plugins and theme.
+!wp-content/mu-plugins/
+!wp-content/plugins/
+!wp-content/themes/
+!wp-content/uploads/alm_templates/
+!config/
+!docker-compose.yml
+!.evn
+
+# Ignore development specific directories.
+.svn
+
+# Ignore useless dot and temp files.
+.DS_Store
+Thumbs.db
+/wp-content/themes/twentytwentyone
+/wp-content/themes/twentytwentytwo
+/wp-content/themes/twentytwentythree
+/wp-content/plugins/akismet
+/wp-content/plugins/hello.php
