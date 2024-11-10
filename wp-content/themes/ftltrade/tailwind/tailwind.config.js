@@ -12,8 +12,33 @@ module.exports = {
 		'./theme/theme.json',
 	],
 	theme: {
-		// Extend the default Tailwind theme.
-		extend: {},
+		container: {
+			center: true,
+			padding: '24px',
+		},
+		extend: {
+			fontFamily: {
+				SimplonNorm: ["SimplonNorm", "sans-serif"],
+			},
+			colors: {
+				'white': '#ffffff',
+				'black': '#000000',
+				'orange': '#F28A2F',
+				'dark-blue': '#001B3F',
+				'blue': '#0064A6',
+				'white-light': 'rgba(255, 255, 255, 0.2)'
+			},
+			fontSize: {
+				'h1': '4rem',
+				'h2': '2.5rem',
+				'h2-mobile': '2rem',
+				'16': '1rem',
+				'14': '0.875rem'
+			},
+			screens: {
+				'2xl': '1285px',
+			}
+		},
 	},
 	corePlugins: {
 		// Disable Preflight base styles in builds targeting the editor.

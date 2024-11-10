@@ -4,7 +4,7 @@
  *
  * Eventually, some functionality here could be replaced by core features.
  *
- * @package Grafiduo_Starter
+ * @package Ftl_Trade_Starter
  */
 
 if ( ! function_exists( 'gftw_posted_on' ) ) :

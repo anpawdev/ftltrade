@@ -7,7 +7,7 @@
  * where various menus can be assigned by site administrators.
  */
 
-if ( ! function_exists( 'grafiduo_register_navigations' ) ) {
+if ( ! function_exists( 'ftl_trade_register_navigations' ) ) {
 	/**
 	 * Registers theme's navigation menus.
 	 *
@@ -16,7 +16,7 @@ if ( ! function_exists( 'grafiduo_register_navigations' ) ) {
 	 *
 	 * @return void
 	 */
-	function grafiduo_register_navigations() {
+	function ftl_trade_register_navigations() {
 		register_nav_menus(
 			array(
 				'menu-1' => __( 'Primary', 'ftltrade' ),
@@ -25,4 +25,4 @@ if ( ! function_exists( 'grafiduo_register_navigations' ) ) {
 		);
 	}
 }
-add_action( 'after_setup_theme', 'grafiduo_register_navigations' );
+add_action( 'after_setup_theme', 'ftl_trade_register_navigations' );

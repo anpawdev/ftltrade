@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Grafiduo_Starter
+ * @package Ftl_Trade_Starter
  */
 
 if ( ! defined( 'GFTW_VERSION' ) ) {
@@ -189,10 +189,18 @@ require get_template_directory() . '/inc/utilities.php';
  * Register ACF builder lib
  * @link https://github.com/StoutLogic/acf-builder/
  */
-require get_template_directory() . '/acf-builder/autoload.php';
+//require get_template_directory() . '/acf-builder/autoload.php';
 
 /**
  * ACF configuration
  * @link https://github.com/Log1x/acf-builder-cheatsheet
  */
-require get_template_directory() . '/acf/banner.php';
+
+acf_add_options_page([
+	'page_title' => get_bloginfo('name') . ' Dodatkowe ustawienia',
+	'menu_title' => 'Dodatkowe ustawienia',
+	'menu_slug'  => 'theme-options',
+	'capability' => 'edit_theme_options',
+	'position'   => '999',
+	'autoload'   => true
+]);

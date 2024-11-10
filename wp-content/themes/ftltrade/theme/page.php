@@ -8,7 +8,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Grafiduo_Starter
+ * @package Ftl_Trade_Starter
  */
 
 get_header();

@@ -1,52 +1,46 @@
 <?php
+
 /**
  * Template part for displaying the footer content
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Grafiduo_Starter
+ * @package Ftl_Trade_Starter
  */
 
 ?>
 
-<footer id="colophon">
-
-	<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
-		<aside role="complementary" aria-label="<?php esc_attr_e( 'Footer', 'ftltrade' ); ?>">
-			<?php dynamic_sidebar( 'sidebar-1' ); ?>
-		</aside>
-	<?php endif; ?>
-
-	<?php if ( has_nav_menu( 'menu-2' ) ) : ?>
-		<nav aria-label="<?php esc_attr_e( 'Footer Menu', 'ftltrade' ); ?>">
+<footer id="footer">
+	<div class="container">
+		<div class="row">
 			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-2',
-					'menu_class'     => 'footer-menu',
-					'depth'          => 1,
-				)
-			);
-			?>
-		</nav>
-	<?php endif; ?>
+			$left_column = get_field('left_column', 'options');
+			if ($left_column): ?>
+				<div>
+					<?php echo $left_column['title']; ?>
+					<?php echo $left_column['text']; ?>
+				</div>
+			<?php endif; ?>
 
-	<div>
-		<?php
-		$gftw_blog_info = get_bloginfo( 'name' );
-		if ( ! empty( $gftw_blog_info ) ) :
-			?>
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>,
 			<?php
-		endif;
+			$middle_column = get_field('middle_column', 'options');
+			if ($middle_column): ?>
+				<div>
+					<div>
+						<?php echo $middle_column['first_title']; ?>
+						<?php echo $middle_column['first_text']; ?>
+					</div>
+					<div>
+						<?php echo $middle_column['second_title']; ?>
+						<?php echo $middle_column['second_text']; ?>
+					</div>
+				</div>
+			<?php endif; ?>
 
-		/* translators: 1: WordPress link, 2: WordPress. */
-		printf(
-			'<a href="%1$s">proudly powered by %2$s</a>.',
-			esc_url( __( 'https://wordpress.org/', 'ftltrade' ) ),
-			'WordPress'
-		);
-		?>
+			<div>
+				<?php echo get_field('right_column', 'options'); ?>
+			</div>
+
+		</div>
 	</div>
-
-</footer><!-- #colophon -->
+</footer>
