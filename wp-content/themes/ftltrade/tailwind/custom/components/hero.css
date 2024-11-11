@@ -1,0 +1,7 @@
+.hero h1 {
+  @apply lg:text-[66px] text-white;
+}
+
+.hero h1 strong {
+  @apply text-green;
+}

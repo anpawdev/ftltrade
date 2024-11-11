@@ -3,3 +3,34 @@
  *
  * These will be added immediately before Tailwind’s `base` layer.
  */
+
+ /**
+ * Custom `@font-face` rules
+ *
+ * These will be added immediately before Tailwind’s `base` layer.
+ */
+
+ @font-face {
+   font-family: 'Barlow';
+   font-weight: 300;
+   font-style: normal;
+  src: url('./fonts/Barlow-Light.ttf') format('truetype'),
+      url('./fonts/Barlow-Light.otf') format('opentype'); }
+
+
+ @font-face {
+   font-family: 'Barlow';
+   font-weight: 400;
+   font-style: normal;
+   src: url('./fonts/Barlow-Regular.ttf') format('truetype'),
+      url('./fonts/Barlow-Regular.otf') format('opentype');
+ }
+
+
+ @font-face {
+   font-family: 'Barlow';
+   font-weight: 700;
+   font-style: normal;
+   src: url('./fonts/Barlow-Bold.ttf') format('truetype'),
+    url('./fonts/Barlow-Bold.otf') format('opentype');
+ }

@@ -50,5 +50,9 @@
 		"bundle": "run-s production zip",
 		"browser-sync": "browser-sync start --proxy \"localhost\" --files \"theme\" --no-notify --no-inject-changes"
 	},
-	"prettier": "@wordpress/prettier-config"
+	"prettier": "@wordpress/prettier-config",
+	"dependencies": {
+		"@splidejs/splide": "^4.1.4",
+		"particles.js": "^2.0.0"
+	}
 }

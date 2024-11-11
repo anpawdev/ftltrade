@@ -12,7 +12,7 @@
 <header class="header py-6 z-10 fixed top-0 left-0 w-full">
 	<div class="container flex justify-between items-center flex-row">
 		<div class="lg:w-2/12 w-10/12 lg:ml-0 -ml-[13px]">
-			<a aria-label="eteflow" href="<?php echo is_page('en') ? bloginfo('url') . '/en' : bloginfo('url'); ?>">
+			<a aria-label="ftl-trade" href="<?php echo bloginfo('url'); ?>">
 				<?php
 				$logo = get_field('logo', 'options');
 

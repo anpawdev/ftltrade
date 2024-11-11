@@ -18,15 +18,12 @@ module.exports = {
 		},
 		extend: {
 			fontFamily: {
-				SimplonNorm: ["SimplonNorm", "sans-serif"],
+				Barlow: ["Barlow", "sans-serif"],
 			},
 			colors: {
-				'white': '#ffffff',
-				'black': '#000000',
-				'orange': '#F28A2F',
-				'dark-blue': '#001B3F',
-				'blue': '#0064A6',
-				'white-light': 'rgba(255, 255, 255, 0.2)'
+				'blue': '#142053',
+				'green': '#049367',
+				'dark': '#111111',
 			},
 			fontSize: {
 				'h1': '4rem',
@@ -36,7 +33,7 @@ module.exports = {
 				'14': '0.875rem'
 			},
 			screens: {
-				'2xl': '1285px',
+				'2xl': '1300px',
 			}
 		},
 	},
