@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <?php
-      if (get_sub_field('company_blocks')) :
+      if (get_field('company_blocks')) :
         while (have_rows('company_blocks')) : the_row();
           $image = get_sub_field('company_image'); ?>
           <div class="flex flex-wrap sm:flex-nowrap sm:gap-[169px]">

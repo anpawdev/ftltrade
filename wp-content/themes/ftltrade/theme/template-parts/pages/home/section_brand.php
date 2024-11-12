@@ -1,6 +1,6 @@
 <?php
 
-$background = get_sub_field('brand_background');
+$background = get_field('brand_background');
 
 ?>
 

@@ -24,6 +24,7 @@ module.exports = {
 				'blue': '#142053',
 				'green': '#049367',
 				'dark': '#111111',
+				'grey': '#eee',
 			},
 			fontSize: {
 				'h1': '4rem',
@@ -33,7 +34,7 @@ module.exports = {
 				'14': '0.875rem'
 			},
 			screens: {
-				'2xl': '1300px',
+				'2xl': '1348px',
 			}
 		},
 	},
