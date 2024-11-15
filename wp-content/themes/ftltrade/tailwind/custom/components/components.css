@@ -55,6 +55,10 @@
 	@apply float-right ml-8;
 }
 
+section {
+  scroll-margin: 120px;
+}
+
 .overlay-grey::before {
   content: '';
   position: absolute;

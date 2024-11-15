@@ -23,12 +23,18 @@ particleContainers.forEach(id => {
 });
 
 const header = document.querySelector('header');
+const logoWhite = document.querySelector('#logo-white');
+const logoScroll = document.querySelector('#logo-scroll');
 document.addEventListener('scroll', (event) => {
   var elmTop = window.scrollY;
   if (elmTop > 50) {
     header.classList.add("header--scroll");
+    logoWhite.classList.add("hidden");
+    logoScroll.classList.remove("hidden");
   } else {
     header.classList.remove("header--scroll");
+    logoWhite.classList.remove("hidden");
+    logoScroll.classList.add("hidden");
   }
 });
 

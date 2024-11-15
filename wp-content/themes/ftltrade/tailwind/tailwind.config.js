@@ -22,9 +22,11 @@ module.exports = {
 			},
 			colors: {
 				'blue': '#142053',
+				'blue-100': '#1e2472',
 				'green': '#049367',
 				'dark': '#111111',
 				'grey': '#eee',
+				'border': '#44498a',
 			},
 			fontSize: {
 				'h1': '4rem',

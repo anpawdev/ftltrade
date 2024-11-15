@@ -9,10 +9,10 @@
  */
 ?>
 
-<header class="header py-6 z-10 fixed top-0 left-0 w-full">
-	<div class="container flex justify-between items-center flex-row">
-		<div class="lg:w-2/12 w-10/12 lg:ml-0 -ml-[13px]">
-			<a aria-label="ftl-trade" href="<?php echo bloginfo('url'); ?>">
+<header class="header z-50 fixed top-0 left-0 w-full">
+	<div class="container-fluid flex justify-between items-center flex-row mx-[33px] border-b border-b-border py-[22px]">
+		<div class="lg:w-2/12 w-10/12 lg:ml-0 -ml-[13px] lg:pl-[73px]">
+			<a aria-label="ftl-trade" href="<?php echo bloginfo('url'); ?>" id="logo-white">
 				<?php
 				$logo = get_field('logo', 'options');
 
@@ -20,6 +20,20 @@
 				if ($logo) {
 					$attr = array(
 						'class' => '',
+						'loading' => 'lazy'
+					);
+					echo wp_get_attachment_image($logo, $size, false, $attr);
+				}
+				?>
+			</a>
+			<a aria-label="ftl-trade" href="<?php echo bloginfo('url'); ?>" class="hidden" id="logo-scroll">
+				<?php
+				$logo = get_field('logo_scroll', 'options');
+
+				$size = 'full';
+				if ($logo) {
+					$attr = array(
+						'width' => '178px',
 						'loading' => 'lazy'
 					);
 					echo wp_get_attachment_image($logo, $size, false, $attr);

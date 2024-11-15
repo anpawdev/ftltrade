@@ -1,5 +1,5 @@
 .hero h1 {
-  @apply lg:text-[66px] text-white;
+  @apply lg:text-[66px] lg:leading-[80px] text-white;
 }
 
 .hero h1 strong {
