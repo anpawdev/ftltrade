@@ -146,12 +146,35 @@ if (sliderttb !== null) {
       autoplay: true,
       pagination: false,
       interval: 7000,
+      speed: 600,
+      easing: 'cubic-bezier(0.4, 0, 0.2, 1)',
       classes: {
         arrows: 'splide__arrows custom-arrows',
         arrow: 'splide__arrow custom-arrow',
         next: 'arrow-next-ttb arrow-next',
         prev: 'arrow-prev-ttb hidden',
       },
-    }).mount()
+    });
+
+    ttb.on('moved', function () {
+      document.querySelectorAll('#splide-ttb .splide__slide').forEach(slide => {
+        slide.classList.remove('is-active', 'is-secondary', 'is-tertiary', 'is-last');
+      });
+
+      const visibleSlides = document.querySelectorAll('#splide-ttb .splide__slide.is-visible');
+      if (visibleSlides[0]) visibleSlides[0].classList.add('is-active');
+      if (visibleSlides[1]) visibleSlides[1].classList.add('is-secondary'); 
+      if (visibleSlides[2]) visibleSlides[2].classList.add('is-tertiary');
+      if (visibleSlides[3]) visibleSlides[3].classList.add('is-last');
+    });
+
+    ttb.mount();
   });
 }
+
+const navToggle = document.querySelector('.nav-toggle');
+const nav = document.querySelector('nav');
+
+navToggle.addEventListener('click', () => {
+  nav.classList.toggle('expanded');
+})

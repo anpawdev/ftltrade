@@ -30,12 +30,8 @@ Underscores and Varia are distributed under the terms of the GNU GPL v2 or later
   fill: #142053;
 }
 
-.header--scroll .container-fluid {
-  @apply  border-b-0;
-}
-
 .header--scroll .menu-item a {
-  @apply !text-blue-100;
+  @apply lg:!text-blue-100;
 }
 
 .header--scroll .current_page_item a {
