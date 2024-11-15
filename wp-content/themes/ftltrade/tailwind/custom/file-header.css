@@ -26,6 +26,10 @@ Underscores and Varia are distributed under the terms of the GNU GPL v2 or later
   @apply bg-white;
 }
 
+.header--scroll svg path {
+  fill: #142053;
+}
+
 .header--scroll .container-fluid {
   @apply  border-b-0;
 }
@@ -44,4 +48,8 @@ header nav ul li a {
 
 header nav ul li a:hover {
   @apply text-green;
+}
+
+header svg:hover path {
+  fill: #049367;
 }

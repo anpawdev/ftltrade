@@ -14,7 +14,7 @@ $background = get_field('footer_background', 'options');
 <footer id="footer" class="text-white text-base leading-[18px] pt-[108px] pb-[108px] lg:pb-[191px] relative" style="background: url(<?php echo $background ?> ) center/cover no-repeat;">
 	<div id="particles-js3" class="absolute top-0 left-0 right-0 bottom-0 z-[2]"></div>
 	<div class="container">
-		<div class="row flex flex-wrap sm:flex-nowrap sm:gap-6 xl:gap-0">
+		<div class="row flex flex-wrap sm:flex-nowrap sm:gap-6 xl:gap-0" data-aos="fade-left">
 			<?php
 			$left_column = get_field('left_column', 'options');
 			if ($left_column): ?>
@@ -46,7 +46,7 @@ $background = get_field('footer_background', 'options');
 		</div>
 		<div class="row">
 			<div class="w-full text-center flex justify-center items-center mt-[119px]">
-				<a aria-label="ftl-trade" href="<?php echo bloginfo('url'); ?>" data-aos="zoom-in">
+				<a aria-label="ftl-trade" href="<?php echo bloginfo('url'); ?>">
 					<?php
 					$logo = get_field('logo', 'options');
 
