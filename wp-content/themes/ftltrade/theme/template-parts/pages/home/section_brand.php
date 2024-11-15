@@ -8,7 +8,7 @@ $background = get_field('brand_background');
   <div id="particles-js2" class="absolute top-0 left-0 right-0 bottom-0 z-[2]"></div>
   <div class="container">
     <div class="flex justify-end">
-      <div id="splide-ttb" class="splide">
+      <div id="splide-ttb" class="splide z-40">
         <div class="splide__track">
           <ul class="splide__list items-center">
             <?php while (have_rows('brand_slider')) : the_row();

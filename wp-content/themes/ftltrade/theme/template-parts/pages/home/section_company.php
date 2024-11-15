@@ -9,7 +9,7 @@
           $row_index++;
           $is_even = $row_index % 2 === 0;
       ?>
-          <div class="lg:w-11/12 md:justify-center flex flex-wrap md:flex-nowrap sm:gap-[40px] lg:gap-[169px] mb-[76px] mx-auto">
+          <div class="lg:w-11/12 md:justify-center flex flex-wrap md:flex-nowrap sm:gap-[40px] lg:gap-[169px] mb-[76px] mx-auto" <?php if ($is_even): ?>data-aos="fade-right" <?php else: ?>data-aos="fade-left" <?php endif; ?>>
             <?php if ($is_even): ?>
               <div class="relative overlay-blue order-2 sm:order-1 w-full md:w-1/2">
               <?php else: ?>

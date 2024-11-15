@@ -36,3 +36,4 @@
 @import "tailwindcss/utilities";
 @import "./custom/utilities.css";
 @import '../node_modules/@splidejs/splide/dist/css/splide.min.css';
+@import '../node_modules/aos/dist/aos.css';

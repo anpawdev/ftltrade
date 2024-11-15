@@ -46,7 +46,7 @@ $background = get_field('footer_background', 'options');
 		</div>
 		<div class="row">
 			<div class="w-full text-center flex justify-center items-center mt-[119px]">
-				<a aria-label="ftl-trade" href="<?php echo bloginfo('url'); ?>">
+				<a aria-label="ftl-trade" href="<?php echo bloginfo('url'); ?>" data-aos="zoom-in">
 					<?php
 					$logo = get_field('logo', 'options');
 

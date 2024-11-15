@@ -53,6 +53,7 @@
 	"prettier": "@wordpress/prettier-config",
 	"dependencies": {
 		"@splidejs/splide": "^4.1.4",
+		"aos": "^2.3.4",
 		"particles.js": "^2.0.0"
 	}
 }

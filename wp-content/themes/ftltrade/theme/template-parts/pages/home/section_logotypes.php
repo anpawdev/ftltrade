@@ -1,8 +1,8 @@
 <section class="border-t border-grey pt-[23px] pb-[78px]">
   <div class="container">
     <div class="row">
-      <h2 class="text-green uppercase text-center font-bold text-[19px] sm:text-[29px]"><?php echo get_field('logotypes_heading'); ?></h2>
-      <div id="splide-logo" class="splide my-[38px]">
+      <h2 class="text-green uppercase text-center font-bold text-[19px] sm:text-[29px]" data-aos="fade-up"><?php echo get_field('logotypes_heading'); ?></h2>
+      <div id="splide-logo" class="splide my-[38px]" data-aos="fade-up">
         <div class="splide__track">
           <ul class="splide__list items-center">
             <?php while (have_rows('logotypes')) : the_row();

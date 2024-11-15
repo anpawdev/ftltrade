@@ -9,10 +9,10 @@
  */
 ?>
 
-<header class="header z-50 fixed top-0 left-0 w-full">
+<header class="header z-50 fixed top-0 left-0 w-full lg:h-[134px]">
 	<div class="container-fluid flex justify-between items-center flex-row mx-[33px] border-b border-b-border py-[22px]">
-		<div class="lg:w-2/12 w-10/12 lg:ml-0 -ml-[13px] lg:pl-[73px]">
-			<a aria-label="ftl-trade" href="<?php echo bloginfo('url'); ?>" id="logo-white">
+		<div class="lg:w-2/12 w-10/12 lg:ml-0 -ml-[13px] lg:pl-[43px]">
+			<a aria-label="ftl-trade" href="<?php echo bloginfo('url'); ?>" id="logo-white" data-aos="zoom-in">
 				<?php
 				$logo = get_field('logo', 'options');
 
