@@ -1,3 +1,27 @@
 .menu-item {
-  @apply mx-[47px] font-bold hover:text-green;
+  @apply mx-[47px] font-bold hover:text-green relative font-Barlow;
+}
+
+.menu-item:hover a::before {
+  transform: scaleX(1);
+}
+
+.menu-item a::before {
+  @apply bg-green absolute block w-full left-0 h-[3px];
+  content: "";
+  bottom: -50px;
+  transform: scaleX(0);
+  transition: transform 0.2s ease-out;
+}
+
+.current_page_item a::before {
+  @apply bg-green absolute block w-full left-0 h-[3px];
+  content: "";
+  bottom: -50px;
+  transform: scaleX(1);
+  transition: transform 0.2s ease-out;
+}
+
+.current_page_item a {
+  @apply text-green;
 }

@@ -26,8 +26,12 @@ Underscores and Varia are distributed under the terms of the GNU GPL v2 or later
   @apply bg-white border-b-0;
 }
 
-.header--scroll .menu-item {
+.header--scroll .menu-item a {
   @apply !text-blue-100;
+}
+
+.header--scroll .current_page_item a {
+  @apply !text-green;
 }
 
 header nav ul li a {
