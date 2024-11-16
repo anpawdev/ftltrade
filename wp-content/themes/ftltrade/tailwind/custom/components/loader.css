@@ -33,7 +33,7 @@
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-image: conic-gradient(#142053, transparent 240deg);
+  background-image: conic-gradient(#049367, transparent 240deg);
   animation: rotate 1s linear infinite;
 }
 
@@ -61,3 +61,14 @@
   position: relative;
   z-index: 2;
 }
+
+@keyframes rotate {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0);
+  }
+}
+
