@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <div class="row">
       <h2 class="text-green uppercase text-center font-bold text-[19px] sm:text-[29px]" data-aos="fade-up"><?php echo get_field('news_heading'); ?></h2>
-      <div class="mt-[92px] mb-[94px] sm:mb-[70px]">
+      <div class="mt-[45px] sm:mt-[92px] mb-[94px] sm:mb-[70px]">
         <?php
         $args = [
           'post_type' => 'post',

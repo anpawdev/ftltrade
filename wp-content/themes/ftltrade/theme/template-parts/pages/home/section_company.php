@@ -1,4 +1,4 @@
-<section id="ftl-trade" class="py-[64px] md:pt-[147px] sm:pb-[106px]">
+<section id="ftl-trade" class="pt-[64px] md:pt-[147px] sm:pb-[106px]">
   <div class="container">
     <div class="row">
       <?php

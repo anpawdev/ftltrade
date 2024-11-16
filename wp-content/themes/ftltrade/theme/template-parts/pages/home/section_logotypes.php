@@ -1,4 +1,4 @@
-<section class="border-t border-grey pt-[23px] pb-[78px]">
+<section class="border-t border-grey pt-[44px] sm:pt-[23px] pb-[23px] sm:pb-[78px]">
   <div class="container">
     <div class="row">
       <h2 class="text-green uppercase text-center font-bold text-[19px] sm:text-[29px]" data-aos="fade-up"><?php echo get_field('logotypes_heading'); ?></h2>
