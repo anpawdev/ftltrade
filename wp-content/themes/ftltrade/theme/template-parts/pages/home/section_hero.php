@@ -4,10 +4,11 @@ $background = get_field('hero_image');
 
 ?>
 
-<section class="hero md:h-[100vh] py-[160px] pt-[194px] lg:pt-[244px] lg:pb-[200px] relative flex items-center" style="background: url(<?php echo $background ?> ) no-repeat;">
+<section class="hero <?php echo is_front_page() ? 'md:h-[100vh]' : 'md:h-[614px] justify-center text-center'; ?>py-[160px] pt-[194px] lg:pt-[244px] lg:pb-[200px] relative flex items-center" style="background: url(<?php echo $background ?> ) no-repeat;">
   <div id="particles-js" class="absolute top-0 left-0 right-0 bottom-0 z-[2]"></div>
-  <div class="container-fluid flex flex-col lg:flex-row lg:justify-between px-[24px] lg:px-[160px]">
-    <div class="w-full z-10 uppercase font-bold" data-aos="fade-right">
+  <div class="<?php echo is_front_page() ? 'container-fluid' : 'container'; ?> <?php echo is_front_page() ? 'flex px-[24px] flex-col lg:flex-row lg:justify-between lg:px-[160px]' : ''; ?>
+">
+    <div class="w-full z-10 uppercase font-bold" <?php echo is_front_page() ? 'data-aos="fade-right"' : 'data-aos="zoom-in"'; ?> >
       <?php echo get_field('hero_heading'); ?>
       <div class="mt-5 sm:mt-[54px]">
 

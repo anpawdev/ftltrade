@@ -1,7 +1,13 @@
 <section class="section-news pb-[64px] sm:pb-[96px]">
   <div class="container-fluid">
     <div class="row">
-      <h2 class="text-green uppercase text-center font-bold text-[19px] sm:text-[29px]" data-aos="fade-up"><?php echo get_field('news_heading'); ?></h2>
+      <h2 class="text-green uppercase text-center font-bold text-[19px] sm:text-[29px]" data-aos="fade-up" data-aos-delay="400">
+        <?php if (is_front_page()) : ?>
+          <?php echo get_field('news_heading'); ?>
+        <?php else : ?>
+          <?php echo get_field('news_title', 49); ?>
+        <?php endif; ?>
+      </h2>
       <div class="mt-[45px] sm:mt-[92px] mb-[94px] sm:mb-[70px]">
         <?php
         $args = [
@@ -12,7 +18,8 @@
         $query = new WP_Query($args);
 
         if ($query->have_posts()): ?>
-          <div id="splide-news" class="splide" data-aos="fade-up">
+          <div id="splide-news" class="splide" <?php if (is_front_page()) : ?>
+            data-aos="fade-up" <?php endif; ?>>
             <div class="splide__track">
               <ul class="splide__list">
                 <?php while ($query->have_posts()): $query->the_post(); ?>
@@ -55,22 +62,24 @@
         ?>
       </div>
     </div>
-    <div class="container">
-      <div class="row justify-end flex">
-        <?php
-        $link = get_field('news_cta');
-        if ($link):
-          $link_url = $link['url'];
-          $link_title = $link['title'];
-          $link_target = $link['target'] ? $link['target'] : '_self';
-        ?>
-          <a data-aos="fade-up" data-aos-delay="200" class=" button text-black hover:text-green transition-all font-Barlow uppercase font-bold text-[17px] flex items-center" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?>
-            <svg class="ml-3 inline-block" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="9" height="17" viewBox="0 0 9 17">
-              <image id="arrow" data-name="arrow" width="9" height="17" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAARCAYAAAAPFIbmAAABN0lEQVQokWJkmZJRz8DA0MXAwPCdARtgYGAAAAAA//9iYmBgKGdgYDiDSwEDAwMDAAAA//8CKTrOwMCgxcDAsBWrCgYGBgAAAAD//wIpYoSyvRgYGLZhqGBgYAAAAAD//0JWBAKeGAoZGBgAAAAA//8CKUIHIIXb4YIMDAwAAAAA///CpggEPOAmMjAwAAAAAP//wqUIYTUDgwgAAAD//8KnCKKQgaEQAAAA//8ipGgfAwPDFAAAAAD//2IhoMCZgYGBAQAAAP//wmXSfpgCBgYGBgAAAAD//8KmaC8DA4MTnMfAwAAAAAD//wIp+o9mhQuKFgYGBgAAAAD//wIp+odkAtwKOGBgYAAAAAD//wIpsmJgYLiDzQQwYGBgAAAAAP//AinqZ2BgMMalgIGBgQEAAAD//wMACZcWSEh3n18AAAAASUVORK5CYII=" />
-            </svg>
-          </a>
-        <?php endif; ?>
+    <?php if (is_front_page()): ?>
+      <div class="container">
+        <div class="row justify-end flex">
+          <?php
+          $link = get_field('news_cta');
+          if ($link):
+            $link_url = $link['url'];
+            $link_title = $link['title'];
+            $link_target = $link['target'] ? $link['target'] : '_self';
+          ?>
+            <a data-aos="fade-up" data-aos-delay="200" class=" button text-black hover:text-green transition-all font-Barlow uppercase font-bold text-[17px] flex items-center" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?>
+              <svg class="ml-3 inline-block" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="9" height="17" viewBox="0 0 9 17">
+                <image id="arrow" data-name="arrow" width="9" height="17" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAARCAYAAAAPFIbmAAABN0lEQVQokWJkmZJRz8DA0MXAwPCdARtgYGAAAAAA//9iYmBgKGdgYDiDSwEDAwMDAAAA//8CKTrOwMCgxcDAsBWrCgYGBgAAAAD//wIpYoSyvRgYGLZhqGBgYAAAAAD//0JWBAKeGAoZGBgAAAAA//8CKUIHIIXb4YIMDAwAAAAA///CpggEPOAmMjAwAAAAAP//wqUIYTUDgwgAAAD//8KnCKKQgaEQAAAA//8ipGgfAwPDFAAAAAD//2IhoMCZgYGBAQAAAP//wmXSfpgCBgYGBgAAAAD//8KmaC8DA4MTnMfAwAAAAAD//wIp+o9mhQuKFgYGBgAAAAD//wIp+odkAtwKOGBgYAAAAAD//wIpsmJgYLiDzQQwYGBgAAAAAP//AinqZ2BgMMalgIGBgQEAAAD//wMACZcWSEh3n18AAAAASUVORK5CYII=" />
+              </svg>
+            </a>
+          <?php endif; ?>
+        </div>
       </div>
-    </div>
+    <?php endif; ?>
   </div>
 </section>

@@ -12,14 +12,14 @@ import Splide from '@splidejs/splide';
 import AOS from 'aos';
 
 const particlesJS = window.particlesJS;
-
-// Lista identyfikatorów kontenerów, w których chcesz uruchomić efekt cząsteczek
 const particleContainers = ['particles-js', 'particles-js2', 'particles-js3'];
 
-// Funkcja, która ładuje konfigurację dla każdego kontenera
+const configPath = `${window.location.origin}/ftltrade/wp-content/themes/ftltrade/theme/js/particlesjs-config.json`;
+console.log(configPath);
+
 particleContainers.forEach(id => {
-  particlesJS.load(id, '../ftltrade/wp-content/themes/ftltrade/theme/js/particlesjs-config.json', function () {
-    //console.log(`callback - particles.js config loaded for #${id}`);
+  particlesJS.load(id, configPath, function () {
+    console.log(`Particles.js config loaded for #${id}`);
   });
 });
 
