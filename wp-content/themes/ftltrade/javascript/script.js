@@ -187,3 +187,11 @@ document.addEventListener('DOMContentLoaded', function () {
     arrow.innerHTML = svgContent
   })
 })
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const loader = document.getElementById('loader');
+    
+    setTimeout(() => {
+      loader.classList.add("hide");
+    }, 800);
+  });

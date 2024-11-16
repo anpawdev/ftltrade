@@ -23,7 +23,7 @@ Underscores and Varia are distributed under the terms of the GNU GPL v2 or later
 */
 
 .header--scroll {
-  @apply bg-white;
+  @apply !bg-white;
 }
 
 .header--scroll svg path {
