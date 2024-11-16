@@ -6,7 +6,11 @@
   @apply text-green;
 }
 
-.hero {
-  background-position: 0 -70px!important;
+.hero--custom {
+  background-position: 0 -70px !important;
   @apply sm:!bg-top;
+}
+
+.hero--top {
+  background-position: 0 -60px !important;
 }

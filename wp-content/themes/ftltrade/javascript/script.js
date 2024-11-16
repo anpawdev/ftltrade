@@ -15,15 +15,12 @@ const particlesJS = window.particlesJS;
 const particleContainers = ['particles-js', 'particles-js2', 'particles-js3'];
 
 const configPath = `${window.location.origin}/ftltrade/wp-content/themes/ftltrade/theme/js/particlesjs-config.json`;
-console.log(configPath);
 
 particleContainers.forEach(id => {
   particlesJS.load(id, configPath, function () {
     console.log(`Particles.js config loaded for #${id}`);
   });
 });
-
-AOS.init();
 
 const header = document.querySelector('header');
 const logoWhite = document.querySelector('#logo-white');
@@ -189,9 +186,12 @@ document.addEventListener('DOMContentLoaded', function () {
 })
 
   document.addEventListener('DOMContentLoaded', function () {
+
     const loader = document.getElementById('loader');
     
     setTimeout(() => {
       loader.classList.add("hide");
+      AOS.init();
     }, 800);
+
   });

@@ -19,7 +19,7 @@
 
         if ($query->have_posts()): ?>
           <div id="splide-news" class="splide" <?php if (is_front_page()) : ?>
-            data-aos="fade-up" <?php endif; ?>>
+            data-aos="fade-up" data-aos-delay="600" <?php endif; ?>>
             <div class="splide__track">
               <ul class="splide__list">
                 <?php while ($query->have_posts()): $query->the_post(); ?>
