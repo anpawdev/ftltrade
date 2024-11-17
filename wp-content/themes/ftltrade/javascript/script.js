@@ -216,3 +216,24 @@ if(buttonShowMore !== null) {
     }
   })
 }
+
+const switchers = document.querySelectorAll('.pll-parent-menu-item');
+
+switchers.forEach(switcher => {
+  const switcherContent = switcher.querySelector('.sub-menu');
+
+  if (switcherContent !== null) {
+    switcher.addEventListener('click', () => {
+      switcherContent.classList.toggle('visible');
+
+      switchers.forEach(otherSwitcher => {
+        if (otherSwitcher !== switcher) {
+          const otherContent = otherSwitcher.querySelector('.sub-menu');
+          if (otherContent && otherContent.classList.contains('visible')) {
+            otherContent.classList.remove('visible');
+          }
+        }
+      });
+    });
+  }
+});

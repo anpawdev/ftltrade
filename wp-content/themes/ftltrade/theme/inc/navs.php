@@ -21,6 +21,7 @@ if ( ! function_exists( 'ftl_trade_register_navigations' ) ) {
 			array(
 				'menu-1' => __( 'Primary', 'ftltrade' ),
 				'menu-2' => __( 'Footer Menu', 'ftltrade' ),
+				'lang' => __('Language', 'ftltrade'),
 			)
 		);
 	}

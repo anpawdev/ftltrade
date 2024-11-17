@@ -10,7 +10,7 @@
   transform: scaleX(1);
 }
 
-.menu-item a::before {
+.menu-item:not(.pll-parent-menu-item) a::before {
   @apply bg-green absolute block w-[3px] lg:w-full left-0 h-full lg:h-[3px] lg:-bottom-[46px] top-0 lg:top-auto lg:transition-transform;
   content: "";
   transform: scaleX(0);
@@ -80,4 +80,24 @@ nav.expanded .nav-toggle div:nth-child(1) {
 
 .nav.expanded .nav-toggle div:nth-child(3) {
   transform: translateX(0px) rotate(-45deg);
+}
+
+.language-switcher .sub-menu {
+  @apply hidden;
+}
+
+.pll-parent-menu-item {
+  @apply lg:ml-2.5 mr-[7px] !border-0 !border-none !border-b-transparent;
+}
+
+.lang-item {
+  @apply !border-0 !border-none !border-b-transparent;
+}
+
+.language-switcher .sub-menu {
+  @apply left-0 lg:-left-[47px] absolute;;
+}
+
+.sub-menu.visible {
+  @apply block;
 }

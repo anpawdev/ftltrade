@@ -206,3 +206,7 @@ acf_add_options_page([
 ]);
 
 add_filter('wpcf7_autop_or_not', '__return_false');
+add_filter('pll_the_languages_args', function ($args) {
+	$args['display_names_as'] = 'slug';
+	return $args;
+});
