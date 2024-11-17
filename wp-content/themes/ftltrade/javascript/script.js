@@ -195,3 +195,16 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 800);
 
   });
+
+document.getElementById('show-more').addEventListener('click', () => {
+  const rodoContent = document.getElementById('rodo-content')
+
+  if (rodoContent.classList.contains('visible')) {
+    rodoContent.style.maxHeight = '0'
+    rodoContent.classList.remove('visible')
+  } else {
+    rodoContent.style.maxHeight = rodoContent.scrollHeight + 'px'
+    rodoContent.classList.add('visible')
+  }
+})
+

@@ -3,7 +3,7 @@
 }
 
 .contact__content h2 {
-  @apply text-[41px] mb-[9px];
+  @apply text-[2rem] sm:text-[41px] mb-[9px];
 }
 
 .contact__content a,
@@ -12,5 +12,96 @@
 }
 
 .contact__content p {
-  @apply text-[19px] leading-[25px];
+  @apply text-base sm:text-[19px] leading-[25px];
+}
+
+
+.half-fluid {
+  .left-half,
+  .right-half {
+    left: 50%;
+  	margin-left: -50vw;
+  	max-width: 100vw;
+  	position: relative;
+  	right: 50%;
+  	width: 100vw;
+    padding: 0px;
+  }
+
+  .image {
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+
+@media (min-width: 992px) {
+
+  .half-fluid {
+    .left-half {
+      padding-left:0 !important;
+      position: absolute;
+      left: 0;
+      right: 50%;
+      margin-left: auto;
+      width: auto;
+    }
+
+    .right-half {
+      padding-right:0 !important;
+      position: absolute;
+      right: 0;
+      left: 50%;
+      margin-left: auto;
+      width: auto;
+    }
+  }
+}
+
+.contact-form form h2 {
+  @apply text-[21px] sm:text-[28px] uppercase font-bold mb-[34px];
+}
+
+form input,
+form textarea {
+  @apply mb-5 sm:mb-[30px] w-full !shadow-none !appearance-none focus:border-none !border-none px-[25px] resize-none text-dark text-base sm:text-[21px];
+}
+form textarea {
+  @apply py-[17px] max-h-[206px];
+}
+
+form input:not([type="submit"]) {
+  @apply h-[50px] sm:h-[61px] block mt-5;
+}
+
+input::placeholder,
+textarea::placeholder {
+  @apply text-dark;
+}
+
+input[type="submit"],
+form .rodo {
+  @apply hover:text-green w-auto transition-all text-white font-bold uppercase inline-block cursor-pointer px-0 text-[19px];
+}
+
+input[type="submit"] {
+  @apply text-right sm:!mt-[22px];
+}
+
+.wpcf7-spinner {
+  @apply absolute right-0 top-[70px];
+}
+
+#rodo-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output {
+  @apply !border-red-700;
+}
+
+.wpcf7-not-valid-tip {
+  @apply relative -top-3.5;
 }
