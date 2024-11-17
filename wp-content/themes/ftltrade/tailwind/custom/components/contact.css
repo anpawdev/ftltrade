@@ -1,0 +1,16 @@
+.contact__content h2, h3, h4, h5, h6 {
+  @apply text-green uppercase font-bold;
+}
+
+.contact__content h2 {
+  @apply text-[41px] mb-[9px];
+}
+
+.contact__content a,
+.contact__content p strong {
+  @apply text-green font-normal;
+}
+
+.contact__content p {
+  @apply text-[19px] leading-[25px];
+}
