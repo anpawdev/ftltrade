@@ -19,7 +19,7 @@
           }
       ?>
           <div
-            class="lg:w-11/12 md:justify-center flex flex-wrap md:flex-nowrap sm:gap-[40px] lg:gap-[169px] mb-[76px] mx-auto"
+            class="lg:w-11/12 md:justify-center flex flex-wrap md:flex-nowrap sm:gap-[40px] xl:gap-[169px] mb-[76px] mx-auto"
             data-aos="<?php echo $is_even ? 'fade-right' : 'fade-left'; ?>">
 
             <!-- Blok z obrazem -->

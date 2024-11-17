@@ -50,9 +50,11 @@ $background = get_field('banner_background', 49);
 				</h2>
 				<div class="mt-[45px] sm:mt-[92px] mb-[94px] sm:mb-[70px]">
 					<?php
+					$current_post_id = get_the_ID();
 					$args = [
 						'post_type' => 'post',
-						'posts_per_page' => 3
+						'posts_per_page' => 3,
+						'post__not_in'   => array($current_post_id),
 					];
 
 					$query = new WP_Query($args);

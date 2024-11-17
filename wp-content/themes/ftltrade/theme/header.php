@@ -22,12 +22,14 @@
 	<?php wp_head(); ?>
 	<div id="loader" class="loader">
 		<div class="logo">
-			<img src='<?php echo get_template_directory_uri(); ?>/images/logo.png' alt='Logo' id='loader-logo'>
+			<img src='<?php echo get_template_directory_uri(); ?>/images/logo.png' alt='Logo' id='loader-logo' loading='lazy'>
 		</div>
 	</div>
+	<?php echo get_field('head_code', 'options'); ?>
 </head>
 
 <body <?php body_class(); ?>>
+	<?php echo get_field('body_code', 'options'); ?>
 
 	<?php wp_body_open(); ?>
 

@@ -12,9 +12,55 @@
  * editor.
 */
 body {
-	@apply bg-background font-Barlow text-dark;
+	@apply font-Barlow bg-background text-dark;
 }
 
 html {
 	scroll-behavior: smooth;
+}
+
+article {
+	ul {
+		list-style: disc;
+		@apply mb-5 px-5;
+	}
+
+	h1 {
+		@apply text-3xl md:text-[52px] lg:text-[66px] md:leading-[60px] lg:leading-[80px];
+	}
+
+	h2 {
+		@apply font-Barlow mb-7 mt-3 text-3xl xl:text-3xl;
+	}
+
+	h3 {
+		@apply font-Barlow text-dark my-5 text-xl sm:text-2xl normal-case;
+	}
+
+	h4 {
+		@apply font-Barlow text-dark text-xl;
+	}
+
+	h5 {
+		@apply font-Barlow text-dark text-xs sm:text-base;
+	}
+
+	h6 {
+		@apply font-Barlow text-dark text-xs;
+	}
+
+	p,
+	ul {
+		@apply mb-5;
+	}
+
+	p,
+	ul li,
+	ul li a {
+		@apply font-Barlow text-base lg:text-[19px] lg:leading-6 text-dark;
+	}
+
+	li::marker {
+		@apply bg-green text-green;
+	}
 }

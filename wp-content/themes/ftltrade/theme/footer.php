@@ -18,6 +18,6 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-
+	<?php echo get_field('body_code_end', 'options');?>
 </body>
 </html>

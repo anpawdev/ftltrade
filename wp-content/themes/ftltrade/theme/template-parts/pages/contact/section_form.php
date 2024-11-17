@@ -28,7 +28,7 @@ $backgroundForm = isset($contact['background']['url']) ? $contact['background'][
 
       <!-- Text -->
       <div class="xl:w-1/2 bg-white xl:pl-[118px] pt-[71px] px-6">
-        <div class="w-[134px] sm:w-[310px] inline-block mb-9">
+        <div class="w-[174px] sm:w-[310px] inline-block mb-9">
           <?php
           $logo = get_field('logo_scroll', 'options');
 

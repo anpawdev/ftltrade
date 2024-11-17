@@ -18,7 +18,7 @@ const configPath = `${window.location.origin}/ftltrade/wp-content/themes/ftltrad
 
 particleContainers.forEach(id => {
   particlesJS.load(id, configPath, function () {
-    console.log(`Particles.js config loaded for #${id}`);
+    //console.log(`Particles.js config loaded for #${id}`);
   });
 });
 
@@ -127,7 +127,7 @@ if (sliderttb !== null) {
       },
       breakpoints: {
         640: {
-          height: '200px',
+          height: '250px',
         },
       }
     });
@@ -185,26 +185,34 @@ document.addEventListener('DOMContentLoaded', function () {
   })
 })
 
-  document.addEventListener('DOMContentLoaded', function () {
 
-    const loader = document.getElementById('loader');
-    
-    setTimeout(() => {
-      loader.classList.add("hide");
-      AOS.init();
-    }, 800);
+document.addEventListener('DOMContentLoaded', () => {
+  const loader = document.getElementById('loader')
 
-  });
+  setTimeout(() => {
+    loader.classList.add('hide')
+  }, 800)
 
-document.getElementById('show-more').addEventListener('click', () => {
-  const rodoContent = document.getElementById('rodo-content')
-
-  if (rodoContent.classList.contains('visible')) {
-    rodoContent.style.maxHeight = '0'
-    rodoContent.classList.remove('visible')
-  } else {
-    rodoContent.style.maxHeight = rodoContent.scrollHeight + 'px'
-    rodoContent.classList.add('visible')
-  }
+  setTimeout(() => {
+    if (typeof AOS !== 'undefined') {
+      AOS.init()
+    }
+  }, 1000)
 })
 
+
+const buttonShowMore = document.querySelector('#show-more');
+
+if(buttonShowMore !== null) {
+  buttonShowMore.addEventListener('click', () => {
+    const rodoContent = document.getElementById('rodo-content')
+
+    if (rodoContent.classList.contains('visible')) {
+      rodoContent.style.maxHeight = '0'
+      rodoContent.classList.remove('visible')
+    } else {
+      rodoContent.style.maxHeight = rodoContent.scrollHeight + 'px'
+      rodoContent.classList.add('visible')
+    }
+  })
+}

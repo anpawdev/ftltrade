@@ -51,24 +51,24 @@
 
 #splide-ttb .splide__slide.is-active {
   transform: scale(1);
-  @apply !text-[26px] sm:text-[66px] opacity-100;
+  @apply !text-[30px] sm:text-[66px] opacity-100;
 }
 
 #splide-ttb .splide__slide.is-secondary {
-  @apply text-2xl sm:text-[58px] opacity-70;
+  @apply text-[28px] sm:text-[58px] opacity-70;
 }
 
 #splide-ttb .splide__slide.is-tertiary {
-  @apply text-2xl sm:text-[50px] opacity-40;
+  @apply text-[26px] sm:text-[50px] opacity-40;
 }
 
 #splide-ttb .splide__slide.is-last {
-  @apply text-xl sm:text-[48px] opacity-20;
+  @apply text-[24px] sm:text-[48px] opacity-20;
 }
 
 
 #splide-ttb .arrow-next-ttb {
-  @apply -bottom-[96px] !top-auto;
+  @apply -bottom-[41px] sm:-bottom-[96px] !top-auto;
 }
 
 #splide-ttb .arrow-prev-ttb {
