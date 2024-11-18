@@ -9,8 +9,8 @@
  */
 ?>
 
-<header class="top-0 left-0 w-full fixed z-50 h-[130px] <?php echo is_404() ? 'bg-blue' : ''; ?>">
-	<nav class="nav lg:mx-[33px] border-b border-b-border py-[25px] max-w-[100vw] h-full">
+<header class="top-0 left-0 w-full fixed z-50 h-[100px] sm:h-[130px] <?php echo is_404() ? 'bg-blue' : ''; ?>">
+	<nav class="nav xl:mx-[33px] border-b border-b-border py-3.5 sm:py-[25px] max-w-[100vw] h-full">
 		<div class="nav-wrapper px-6 flex justify-between items-center">
 			<div>
 				<a aria-label="ftl-trade" href="<?php echo bloginfo('url'); ?>" id="logo-white" data-aos="zoom-in">

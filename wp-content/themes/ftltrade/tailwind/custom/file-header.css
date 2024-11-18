@@ -34,7 +34,8 @@ Underscores and Varia are distributed under the terms of the GNU GPL v2 or later
   @apply lg:!text-blue-100;
 }
 
-.header--scroll .current_page_item a {
+.header--scroll .current_page_item a,
+.header--scroll .pll-parent-menu-item a:hover {
   @apply !text-green;
 }
 

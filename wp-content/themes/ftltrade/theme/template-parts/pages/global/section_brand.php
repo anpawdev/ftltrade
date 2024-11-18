@@ -4,7 +4,7 @@ $background = get_field('brand_background');
 
 ?>
 
-<section class="relative mb-[82px] min-h-[400px] lg:min-h-[899px] flex justify-center items-center" style="background: url(<?php echo $background ?> ) center no-repeat;">
+<section class="relative mb-[66px] min-h-[400px] md:min-h-[600px] lg:min-h-[899px] flex justify-center items-center" style="background: url(<?php echo $background ?> ) center no-repeat;">
   <div id="particles-js2" class="absolute top-0 left-0 right-0 bottom-0 z-[2]"></div>
   <div class="container">
     <div class="flex justify-center xl:justify-end">

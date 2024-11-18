@@ -8,10 +8,10 @@
 }
 
 	.splide__arrow--prev {
-		@apply md:!-left-16;
+		@apply xl:!-left-16;
 	}
 	.splide__arrow--next {
-  @apply md:!-right-16;
+  @apply xl:!-right-16;
 }
 
 .splide__pagination .splide__pagination__page {

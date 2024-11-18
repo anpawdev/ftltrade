@@ -1,4 +1,4 @@
-<section id="ftl-trade" class="pt-[64px] md:pt-[147px] sm:pb-[106px]">
+<section id="ftl-trade" class="pt-[64px] md:pt-[147px] lg:pb-[106px]">
   <div class="container">
     <div class="row">
       <?php
@@ -19,7 +19,7 @@
           }
       ?>
           <div
-            class="lg:w-11/12 md:justify-center flex flex-wrap md:flex-nowrap sm:gap-[40px] xl:gap-[169px] mb-[76px] mx-auto"
+            class="lg:w-11/12 md:justify-center flex flex-wrap md:flex-nowrap sm:gap-[40px] xl:gap-[114px] mb-[76px] mx-auto"
             data-aos="<?php echo $is_even ? 'fade-right' : 'fade-left'; ?>">
 
             <!-- Blok z obrazem -->
