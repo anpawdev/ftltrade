@@ -1,7 +1,7 @@
-Grafiduo Starter
+FTL Trade Starter
 ================
 
-This is a starter tailwind theme from Grafiduo
+This is a starter tailwind theme from FTL Trade
 
 ## Quickstart
 
