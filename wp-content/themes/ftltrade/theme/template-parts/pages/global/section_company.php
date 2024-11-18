@@ -25,7 +25,12 @@
             <!-- Blok z obrazem -->
             <div class="relative overlay-blue <?php echo $image_order; ?> w-full md:w-1/2">
               <?php echo wp_get_attachment_image($image, 'full', '', array("class" => "w-full xl:min-w-[507px] h-full")); ?>
-              <div class="absolute top-[50%] left-[50%] text-white -translate-x-1/2 -translate-y-1/2 z-10">
+              <?php if (!$is_even): ?>
+                <img src='<?php echo get_template_directory_uri(); ?>/images/mask.svg' alt='' loading='lazy' class="absolute top-0 z-10 xl:w-[260px]">
+              <?php else: ?>
+                <img src='<?php echo get_template_directory_uri(); ?>/images/mask.svg' alt='' loading='lazy' class="absolute rotate-180 right-0 bottom-0 z-10 xl:w-[260px]">
+              <?php endif; ?>
+              <div class="absolute top-[50%] left-[50%] text-white -translate-x-1/2 -translate-y-1/2 z-20">
                 <span class="uppercase font-bold text-[32px] lg:text-[45px] leading-none">
                   <?php echo get_sub_field('company_image_heading'); ?>
                 </span>

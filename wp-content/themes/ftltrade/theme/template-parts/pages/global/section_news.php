@@ -26,7 +26,7 @@
                   <li class="splide__slide">
                     <div class="overlay-blue relative">
                       <?php the_post_thumbnail('full', ['class' => 'w-full h-[307px] object-cover']); ?>
-                      <img src='<?php echo get_template_directory_uri(); ?>/images/mask.png' alt='' loading='lazy'>
+                      <img src='<?php echo get_template_directory_uri(); ?>/images/mask.svg' alt='' loading='lazy' class="absolute top-0 z-20">
                       <div class="absolute top-[50%] left-[50%] text-white -translate-x-1/2 -translate-y-1/2 w-full text-center px-4 z-10">
                         <h3 class="text-white text-[45px] uppercase font-bold"><?php the_title(); ?></h3>
                         <span class="font-bold text-white uppercase text-base sm:text-[18px]"><?php echo get_field('date'); ?></span>
