@@ -11,7 +11,7 @@
 $background = get_field('footer_background', 'options');
 ?>
 
-<footer id="footer" class="text-white text-base leading-[18px] pt-[108px] pb-[108px] lg:pb-[191px] relative" style="background: url(<?php echo $background ?> ) center/cover no-repeat;">
+<footer id="footer" class="text-white text-base leading-[18px] pt-[108px] pb-[31px] relative" style="background: url(<?php echo $background ?> ) center/cover no-repeat;">
 	<div id="particles-js3" class="absolute top-0 left-0 right-0 bottom-0 z-[2]"></div>
 	<div class="container">
 		<div class="row flex flex-wrap sm:flex-nowrap sm:gap-6 xl:gap-0" data-aos="fade-left">
@@ -60,6 +60,9 @@ $background = get_field('footer_background', 'options');
 					}
 					?>
 				</a>
+			</div>
+			<div class="copyright text-center mx-auto mt-[74px] lg:mt-[160px] relative z-50 w-full">
+				<?php echo get_field('copyright', 'options'); ?>
 			</div>
 		</div>
 	</div>

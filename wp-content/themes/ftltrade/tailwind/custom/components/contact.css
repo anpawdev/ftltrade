@@ -11,6 +11,10 @@
   @apply text-green font-normal;
 }
 
+.contact__content a:hover {
+  @apply underline;
+}
+
 .contact__content p {
   @apply text-base sm:text-[19px] leading-[25px];
 }

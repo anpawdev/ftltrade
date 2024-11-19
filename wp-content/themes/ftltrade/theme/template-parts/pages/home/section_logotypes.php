@@ -2,16 +2,7 @@
   <div class="container">
     <div class="row">
       <?php
-      $pages = get_posts(array(
-        'post_type' => 'page',
-        'posts_per_page' => -1,
-        'post_status' => 'publish',
-      ));
-
-      if ($pages) :
-        foreach ($pages as $page) :
-          if (have_rows('logotypes_clone', $page->ID)) :
-            $logotypes_heading = get_field('logotypes_heading', $page->ID);
+            $logotypes_heading = get_field('logotypes_heading');
             if ($logotypes_heading) : ?>
               <h2 class="text-green uppercase text-center font-bold text-[19px] sm:text-[29px]" data-aos="fade-up">
                 <?php echo esc_html($logotypes_heading); ?>
@@ -21,8 +12,7 @@
             <div id="splide-logo" class="splide my-[38px]" data-aos="fade-up">
               <div class="splide__track">
                 <ul class="splide__list items-center">
-                  <?php while (have_rows('logotypes_clone', $page->ID)) : the_row();
-                    if (have_rows('logotypes')) :
+                  <?php if (have_rows('logotypes')) :
                       while (have_rows('logotypes')) : the_row();
                         $image = get_sub_field('logo');
                         if ($image) : ?>
@@ -32,15 +22,13 @@
                             </div>
                           </li>
                   <?php endif;
-                      endwhile;
+                    endwhile;
                     endif;
-                  endwhile; ?>
+                   ?>
                 </ul>
               </div>
             </div>
-        <?php endif;
-        endforeach;?>
-      <?php endif; ?>
+        <?php  ?>
     </div>
   </div>
 </section>

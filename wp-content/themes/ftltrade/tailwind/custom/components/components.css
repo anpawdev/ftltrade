@@ -59,7 +59,7 @@ section {
   scroll-margin: 120px;
 }
 
-.overlay-grey::before {
+/* .overlay-grey::before {
   content: '';
   position: absolute;
   top: 0;
@@ -74,7 +74,7 @@ section {
 
 .overlay-grey:hover::before {
 	background: none;
-}
+} */
 
 .overlay-blue::before {
   content: '';
@@ -95,4 +95,12 @@ section {
 
 iframe {
   @apply h-[400px] sm:h-[650px] grayscale hover:grayscale-0 transition-all;
+}
+
+.copyright p {
+  @apply flex items-baseline flex-wrap justify-center;
+}
+
+.copyright a {
+  @apply ml-2 mt-2 sm:mt-0;
 }
